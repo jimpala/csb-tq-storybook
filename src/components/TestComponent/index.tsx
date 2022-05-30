@@ -1,14 +1,14 @@
 import React, {PropsWithChildren, ReactElement} from 'react';
-import {Box, BoxProps} from "@chakra-ui/react";
+import {Box, BoxProps, Center, CenterProps} from "@chakra-ui/react";
 
-export type TestComponentProps = BoxProps & {}
+export type FrameProps = CenterProps & {}
 
-const TestComponent = ({...props}: PropsWithChildren<TestComponentProps>): ReactElement => {
+const Frame = ({children, ...props}: PropsWithChildren<FrameProps>): ReactElement => {
   return (
-    <Box h={16} w={16} bg={"brandTurquoise"} color={"white"} {...props}>
-      Hello
-    </Box>
+    <Center w={"100%"} h={"100vh"} {...props}>
+      {children}
+    </Center>
   );
 };
 
-export default TestComponent;
+export default Frame;

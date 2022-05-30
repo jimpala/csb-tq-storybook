@@ -8,6 +8,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app"
   ],
+  staticDirs: ['../public'],
   framework: "@storybook/react",
   core: {
     builder: "webpack5",
